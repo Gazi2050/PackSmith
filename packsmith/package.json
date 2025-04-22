@@ -3,12 +3,32 @@
     "version": "0.0.1",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "homepage": "https://github.com/Gazi2050/PackSmith",
+    "repository": {
+        "url": "https://github.com/Gazi2050/PackSmith"
+    },
+    "bugs": {
+        "url": "https://github.com/Gazi2050/PackSmith/issues"
+    },
     "scripts": {
         "dev": "ts-node src/index.ts",
         "build": "tsup",
         "lint": "eslint . --ext .ts",
         "test": "vitest"
     },
+    "keywords": [
+        "utility",
+        "package",
+        "library",
+        "utility library",
+        "toolkit",
+        "starter-kit",
+        "packsmith",
+        "create-packsmith"
+    ],
+    "author": "gazi2050",
+    "license": "MIT",
+    "description": "A minimal toolkit for building packages outside the ecosystem.",
     "devDependencies": {
         "@eslint/js": "^9.25.1",
         "eslint": "^9.25.1",
