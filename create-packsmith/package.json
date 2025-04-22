@@ -7,6 +7,13 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://github.com/Gazi2050/PackSmith",
+  "repository": {
+    "url": "https://github.com/Gazi2050/PackSmith/tree/main/create-packsmith"
+  },
+  "bugs": {
+    "url": "https://github.com/Gazi2050/PackSmith/issues"
+  },
   "scripts": {
     "dev": "ts-node src/index.ts",
     "build": "tsup"
@@ -20,7 +27,7 @@
     "packsmith",
     "create-packsmith"
   ],
-  "author": "Gazi2050",
+  "author": "gazi2050",
   "license": "MIT",
   "description": "A CLI tool for creating projects in PackSmith.",
   "dependencies": {
