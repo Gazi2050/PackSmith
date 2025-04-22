@@ -1,0 +1,38 @@
+{
+  "name": "create-packsmith",
+  "version": "0.0.1",
+  "type": "module",
+  "bin": {
+    "create-packsmith": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsup"
+  },
+  "keywords": [
+    "cli",
+    "typescript",
+    "starter",
+    "generator",
+    "utility",
+    "packsmith",
+    "create-packsmith"
+  ],
+  "author": "Gazi2050",
+  "license": "MIT",
+  "description": "A CLI tool for creating projects in PackSmith.",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.14.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}
