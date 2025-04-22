@@ -8,7 +8,6 @@ import ejs from 'ejs';
 import { execSync } from 'child_process';
 import { filesToGenerate } from '@constants/filesToGenerate';
 
-
 // Templates directory
 const templatesDir = path.join(__dirname, 'templates');
 
@@ -42,7 +41,7 @@ program
         }
 
         // Create src/index.ts
-        const srcIndexContent = ` console.log("Hello PackSmith")\n`;
+        const srcIndexContent = `console.log("Hello PackSmith");\n`;
         await fs.writeFile(path.join(projectPath, 'src', 'index.ts'), srcIndexContent);
         console.log(chalk.green('✅ Created src/index.ts'));
 
