@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+
+# source files and tests
+src/
+tests/
+
+# config files
+tsconfig.json
+tsup.config.ts
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# version control
+.git
+.gitignore
+
+# IDE/Editor folders and files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Coverage directory
+coverage/
