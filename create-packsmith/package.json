@@ -1,6 +1,6 @@
 {
   "name": "create-packsmith",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "type": "module",
   "bin": {
     "create-packsmith": "dist/index.js"
@@ -16,7 +16,8 @@
   },
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "build": "tsup"
+    "build": "tsup",
+    "postbuild": "cpx \"src/templates/**/*.ejs\" dist/templates"
   },
   "keywords": [
     "cli",
@@ -40,6 +41,7 @@
     "@types/ejs": "^3.1.5",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.14.1",
+    "cpx": "^1.5.0",
     "ts-node": "^10.9.2",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
