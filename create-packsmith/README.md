@@ -1,7 +1,7 @@
 # 📦 `create-packsmith`  
 > A simple CLI tool to start a new project using [PackSmith](https://github.com/Gazi2050/PackSmith)
 
-**Version:** `v0.0.5`
+**Version:** `v0.0.6`
 
 ## 🚀 Quick Start
 

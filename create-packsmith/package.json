@@ -1,6 +1,6 @@
 {
   "name": "create-packsmith",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "bin": {
     "create-packsmith": "dist/index.js"
