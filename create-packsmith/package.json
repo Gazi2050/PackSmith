@@ -1,6 +1,6 @@
 {
   "name": "create-packsmith",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "bin": {
     "create-packsmith": "dist/index.js"
@@ -9,7 +9,7 @@
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/Gazi2050/PackSmith",
   "repository": {
-    "url": "https://github.com/Gazi2050/PackSmith/tree/main/create-packsmith"
+    "url": "https://github.com/Gazi2050/PackSmith"
   },
   "bugs": {
     "url": "https://github.com/Gazi2050/PackSmith/issues"
@@ -33,9 +33,11 @@
   "dependencies": {
     "chalk": "^5.4.1",
     "commander": "^13.1.0",
+    "ejs": "^3.1.10",
     "fs-extra": "^11.3.0"
   },
   "devDependencies": {
+    "@types/ejs": "^3.1.5",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.14.1",
     "ts-node": "^10.9.2",

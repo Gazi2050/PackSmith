@@ -8,7 +8,19 @@
         "strict": true,
         "skipLibCheck": true,
         "outDir": "dist",
-        "declaration": true
+        "declaration": true,
+        "baseUrl": ".",
+        "paths": {
+            "@templates/*": [
+                "src/templates/*"
+            ],
+            "@constants/*": [
+                "src/constants/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ]
+        }
     },
     "include": [
         "src"
