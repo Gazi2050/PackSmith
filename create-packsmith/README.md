@@ -1,39 +1,38 @@
-# 📦 Create-PackSmith
+# 📦 `create-packsmith`  
+> A simple CLI tool to start a new project using [PackSmith](https://github.com/Gazi2050/PackSmith)
 
-> `create-packsmith` v0.0.5
+**Version:** `v0.0.5`
 
-### A CLI tool to kickstart your package with PackSmith.
+## 🚀 Quick Start
 
-💡 Full docs: [PackSmith Docs](https://github.com/Gazi2050/PackSmith)
-
----
-
-## 🚀 How to Use
-
-Just run:
+Get up and running with one command:
 
 ```bash
 npx create-packsmith <project-name>
 ```
 
-Then follow the steps in your terminal — and you’re good to go!
+Just follow the prompts in your terminal — PackSmith will handle the rest.
+
+## 📚 Documentation
+
+Check out the full docs here → [PackSmith Docs](https://github.com/Gazi2050/PackSmith)
 
 
-## 🙌 Contribute
+## 🙌 Contributing
 
-Want to help improve this project? Awesome! Here's how:
+Want to improve `create-packsmith`? You're amazing — let’s do it:
 
-1. **Fork** this repo
+1. **Fork** the repository  
 2. **Clone** your fork:
    ```bash
-   git clone https://github.com/your-username/PackSmith.git
+   git clone https://github.com/Gazi2050/PackSmith
    cd PackSmith
    ```
-3. **Install dependencies** (if needed):
+3. **Install dependencies**:
    ```bash
    npm install
    ```
-4. **Create a new branch**:
+4. **Create a feature branch**:
    ```bash
    git checkout -b your-feature-name
    ```
@@ -45,4 +44,4 @@ Want to help improve this project? Awesome! Here's how:
    ```
 6. **Open a pull request** on GitHub
 
-That’s it — thank you for contributing! 🎉
+> Thanks for being part of the journey!
