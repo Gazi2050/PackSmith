@@ -1,1 +1,1 @@
-export const check = true
+export { isEmpty } from "./isEmpty";

@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ESNext",
-        "module": "ESNext",
+        "module": "CommonJS",
         "moduleResolution": "Node",
         "strict": true,
         "esModuleInterop": true,
@@ -11,6 +11,9 @@
         "allowJs": true,
         "baseUrl": ".",
         "paths": {
+            "@src/*": [
+                "src/*"
+            ],
             "@check/*": [
                 "src/utils/check/*"
             ],
@@ -22,10 +25,14 @@
             ],
             "@array/*": [
                 "src/utils/array/*"
+            ],
+            "@type/*": [
+                "src/type/*"
             ]
         }
     },
     "include": [
-        "src"
+        "src",
+        "test"
     ]
 }

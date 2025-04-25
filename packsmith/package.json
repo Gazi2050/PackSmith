@@ -11,7 +11,6 @@
         "url": "https://github.com/Gazi2050/PackSmith/issues"
     },
     "scripts": {
-        "dev": "ts-node src/index.ts",
         "build": "tsup",
         "lint": "eslint . --ext .ts",
         "test": "vitest"
@@ -34,9 +33,11 @@
         "eslint": "^9.25.1",
         "globals": "^16.0.0",
         "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
         "tsup": "^8.4.0",
         "typescript": "^5.8.3",
         "typescript-eslint": "^8.31.0",
+        "vite-tsconfig-paths": "^5.1.4",
         "vitest": "^3.1.2"
     }
 }
