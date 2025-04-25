@@ -1,5 +1,8 @@
 {
     "compilerOptions": {
+        "types": [
+            "vitest"
+        ],
         "target": "ESNext",
         "module": "CommonJS",
         "moduleResolution": "Node",
@@ -11,9 +14,6 @@
         "allowJs": true,
         "baseUrl": ".",
         "paths": {
-            "@src/*": [
-                "src/*"
-            ],
             "@check/*": [
                 "src/utils/check/*"
             ],
