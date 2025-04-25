@@ -1,16 +1,31 @@
 {
-"compilerOptions": {
-"target": "ESNext",
-"module": "ESNext",
-"moduleResolution": "Node",
-"strict": true,
-"esModuleInterop": true,
-"skipLibCheck": true,
-"declaration": true,
-"outDir": "dist",
-"allowJs": true
-},
-"include": [
-"src"
-]
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "declaration": true,
+        "outDir": "dist",
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "@check/*": [
+                "src/utils/check/*"
+            ],
+            "@date/*": [
+                "src/utils/date/*"
+            ],
+            "@string/*": [
+                "src/utils/string/*"
+            ],
+            "@array/*": [
+                "src/utils/array/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ]
 }
