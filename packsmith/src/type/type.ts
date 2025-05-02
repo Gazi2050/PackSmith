@@ -1,1 +1,1 @@
-//type
+export type demo = string
