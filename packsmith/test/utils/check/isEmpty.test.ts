@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { isEmpty } from "src";
 import { describe, it, expect } from "vitest";
 
@@ -12,6 +11,6 @@ describe('testing isEmpty', () => {
         expect(isEmpty('a')).toBe(false);
         expect(isEmpty([1])).toBe(false);
         expect(isEmpty({ a: 1 })).toBe(false);
-        expect(isEmpty(0 as any)).toBe(false);
+        expect(isEmpty(0)).toBe(false);
     });
 });

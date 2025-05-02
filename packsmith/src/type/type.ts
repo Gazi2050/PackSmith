@@ -1,1 +1,1 @@
-export type EmptyType = string | [] | object | null | undefined;
+//type
