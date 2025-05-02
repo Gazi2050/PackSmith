@@ -1,0 +1,9 @@
+import { describe, expect, it } from "vitest";
+import { <%= projectName %> } from "../src";
+
+    describe('<%= projectName %>', () => {
+        it('should return "Hello <%= projectName %>"', () => {
+            const result = <%= projectName %>();
+                expect(result).toBe("Hello <%= projectName %>");
+                    });
+                    });

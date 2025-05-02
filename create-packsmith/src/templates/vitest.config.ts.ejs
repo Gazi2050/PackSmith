@@ -1,16 +1,20 @@
-import { defineConfig } from "vitest/config";
+import type { ViteUserConfig } from "vitest/config";
 
-export default defineConfig({
-test: {
-environment: "node",
-include: ["test/**/*.test.ts"],
-coverage: {
-provider: "v8",
-reportsDirectory: "coverage",
-reporter: ["json", "lcov", "text", "clover"],
-},
-globals: true,
-passWithNoTests: false,
-watch: false,
-},
-});
+export default async function (): Promise<ViteUserConfig> {
+
+    return {
+    plugins: [],
+    test: {
+    environment: "node",
+    include: ["test/**/*.test.ts"],
+    globals: true,
+    watch: false,
+    passWithNoTests: false,
+    coverage: {
+    provider: "v8",
+    reporter: ["json", "lcov", "text", "clover"],
+    reportsDirectory: "./coverage",
+    },
+    },
+    };
+    }
