@@ -1,4 +1,4 @@
-# 📦 PackSmith (under development)
+# 📦 PackSmith (`under development`)
 
 ### **A minimal library for building packages.**
 
