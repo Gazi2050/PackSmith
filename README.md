@@ -1,6 +1,6 @@
 # 📦 PackSmith
 
-**A minimal toolkit for building packages outside the ecosystem.**
+**A minimal library for building packages.**
 
 ## 🚀 Quick Start
 
