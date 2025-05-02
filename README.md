@@ -1,6 +1,6 @@
 # 📦 PackSmith
 
-**A minimal library for building packages.**
+### **A minimal library for building packages.**
 
 ## 🚀 Quick Start
 
@@ -18,7 +18,7 @@ Want to improve `packsmith` ? You're awesome — here's how:
 1. **Fork & clone the repo**  
    ```bash
    git clone https://github.com/Gazi2050/PackSmith.git
-   
+
    cd PackSmith
    ```
 
