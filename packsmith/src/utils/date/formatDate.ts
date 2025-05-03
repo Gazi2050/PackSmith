@@ -1,6 +1,6 @@
 import { FormatType } from "@type/type";
 
-export function formatDate(date: Date, type: FormatType): string {
+export function formatDate(date: Date, type: FormatType) {
     if (isNaN(date.getTime())) return '';
 
     const pad = (n: number) => String(n).padStart(2, '0');
