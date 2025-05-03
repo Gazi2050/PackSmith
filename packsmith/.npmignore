@@ -30,3 +30,6 @@ vitest.config.ts
 
 # Coverage
 coverage/
+
+# experimental files
+try.ts
