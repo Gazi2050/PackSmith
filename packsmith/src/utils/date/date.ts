@@ -1,1 +1,1 @@
-export { isSameHour } from "./isSameHour";
+export { isSameTime } from "./isSameTime";
