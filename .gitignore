@@ -31,3 +31,6 @@ tmp/
 
 # Coverage
 coverage/
+
+# experimental files
+try.ts
