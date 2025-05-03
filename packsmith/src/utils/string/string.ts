@@ -1,1 +1,1 @@
-export const str = "hello"
+export { isPalindrome } from "./isPalindrome";
