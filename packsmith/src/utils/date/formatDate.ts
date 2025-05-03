@@ -1,5 +1,12 @@
 import { FormatType } from "@type/type";
 
+/**
+ * Formats a Date object into a string based on the specified format type.
+ * 
+ * @param date - The Date object to format.
+ * @param type - The format type to apply (e.g., 'iso', 'short', 'time', etc.).
+ * @returns The formatted date string.
+ */
 export function formatDate(date: Date, type: FormatType) {
     if (isNaN(date.getTime())) return '';
 

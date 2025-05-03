@@ -1,3 +1,9 @@
+/**
+ * Determines the status of a given date (present, past, or future).
+ * 
+ * @param date - The Date object to evaluate.
+ * @returns A string indicating whether the date is 'present', 'past', or 'future'.
+ */
 export function getDateStatus(date: Date) {
     if (isNaN(date.getTime())) return 'invalid';
 

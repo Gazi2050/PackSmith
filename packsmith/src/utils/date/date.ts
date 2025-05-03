@@ -1,3 +1,6 @@
+/**
+ * Utility date functions exports.
+ */
 export { isSameTime } from "./isSameTime";
 export { isRelativeDay } from "./isRelativeDay";
 export { isInCurrent } from "./isInCurrent";
