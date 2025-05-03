@@ -1,1 +1,1 @@
-export const date = 2025
+export { isSameHour } from "./isSameHour";
