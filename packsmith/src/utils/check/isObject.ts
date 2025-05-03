@@ -1,3 +1,9 @@
+/**
+ * Checks if a value is a plain object (not null, undefined, or an array).
+ * 
+ * @param value - The value to check.
+ * @returns True if the value is a plain object, otherwise false.
+ */
 export function isObject(value: unknown) {
     if (value === null) {
         return false;
