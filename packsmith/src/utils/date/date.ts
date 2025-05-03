@@ -1,2 +1,2 @@
 export { isSameTime } from "./isSameTime";
-export { isToday } from "./isToday";
+export { isRelativeDay } from "./isRelativeDay";

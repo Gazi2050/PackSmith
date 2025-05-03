@@ -1,4 +1,4 @@
-export type TimeUnit = 'day' | 'hour' | 'minute' | 'second';
+import { TimeUnit } from "@type/type";
 
 export function isSameTime(date1: Date, date2: Date, unit?: TimeUnit): boolean {
     if (isNaN(date1.getTime()) || isNaN(date2.getTime())) return false;
