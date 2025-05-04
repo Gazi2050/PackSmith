@@ -9,7 +9,7 @@ npx create-packsmith <project-name>
 ```
 ## 📚 Documentation
 
-Check out the full docs here → [PackSmith Docs](https://github.com/Gazi2050/PackSmith)
+Check out the full docs here → [PackSmith Docs](https://packsmith.vercel.app)
 
 ## 🙌 Contribute
 

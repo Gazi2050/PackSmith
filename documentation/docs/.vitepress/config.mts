@@ -22,7 +22,8 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Gazi2050/PackSmith' }
+      { icon: 'github', link: 'https://github.com/Gazi2050/PackSmith' },
+      { icon: 'npm', link: 'https://www.npmjs.com/package/packsmith' }
     ]
   }
 })
