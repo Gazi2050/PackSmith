@@ -1,3 +1,6 @@
+/**
+ * String utility functions exports.
+ */
 export { isPalindrome } from "./isPalindrome";
 export { isAnagram } from "./isAnagram";
 export { truncateString } from "./truncateString";

@@ -1,5 +1,5 @@
 /**
- * Utility type-checking exports.
+ * Type-checking utility functions exports.
  */
 export { isEmpty } from "./isEmpty";
 export { isArray } from "./isArray";

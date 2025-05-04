@@ -1,5 +1,5 @@
 /**
- * Utility date functions exports.
+ * Date utility  functions exports.
  */
 export { isSameTime } from "./isSameTime";
 export { isRelativeDay } from "./isRelativeDay";
