@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "PackSmith"
   text: ""
-  tagline: A minimal library for building packages.
+  tagline: A minimal library for building packages.<br>Simplifies setup and speeds up development.
   image:
     src: https://tinypic.host/images/2025/05/04/ps.png
     alt: VitePress
@@ -22,10 +22,16 @@ hero:
 
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: ⚡
+    title: Instant Setup
+    details: One command, and your package is ready to go. No config, no boilerplate — just clean code.
+
+  - icon: 📦
+    title: Essentials Included
+    details: TypeScript, ESLint, Tsup, and Vitest prebuilt. Everything works out of the box.
+
+  - icon: 🛠️
+    title: Built-in Utilities
+    details: Handy functions for strings, arrays, dates, and more. Fewer dependencies, cleaner code.
+
 ---
