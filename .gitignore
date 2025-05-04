@@ -32,5 +32,8 @@ tmp/
 # Coverage
 coverage/
 
+# Vercel
+.vercel
+
 # experimental files
 try.ts
