@@ -13,10 +13,10 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Introduction',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'What is PackSmith', link: '/what-is-packsmith' },
+          { text: 'Getting Started', link: '/quick-start.md' }
         ]
       }
     ],
