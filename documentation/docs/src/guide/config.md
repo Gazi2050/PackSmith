@@ -163,7 +163,7 @@ The `package.json` contains essential project metadata and predefined scripts fo
     },
 
     "dependencies": {
-        "packsmith": "^0.0.4"                // Runtime dependency for your package
+        "packsmith": "^0.0.4"                // Preconfigured toolkit for utilities
     },
 
     "devDependencies": {
