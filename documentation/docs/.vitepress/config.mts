@@ -4,21 +4,26 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "PackSmith",
   description: "PackSmith documentation",
+  srcDir: 'src',
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide' }
+      { text: 'Guide', link: '/guide', activeMatch: '/guide/' }
     ],
 
     sidebar: [
       {
         text: 'Introduction',
+        collapsed: false,
         items: [
-          { text: 'What is PackSmith', link: '/what-is-packsmith' },
-          { text: 'Getting Started', link: '/quick-start.md' }
+          { text: 'What is PackSmith', link: '/guide/what-is-packsmith' },
+          { text: 'Getting Started', link: '/guide/quick-start' }
         ]
-      }
+      },
+      // Add more sections as needed
     ],
 
     socialLinks: [

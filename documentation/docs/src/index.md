@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: What is PackSmith
-      link: /what-is-packsmith
+      link: /guide/what-is-packsmith
     - theme: alt
       text: Quickstart
-      link: /quick-start
+      link: /guide/quick-start
     - theme: alt
       text: GitHub
       link: https://github.com/Gazi2050/PackSmith

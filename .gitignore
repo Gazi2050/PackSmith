@@ -16,7 +16,7 @@ jspm_packages/
 dist/
 build/
 tmp/
-
+cache/
 # Environment files
 .env
 .env.local
