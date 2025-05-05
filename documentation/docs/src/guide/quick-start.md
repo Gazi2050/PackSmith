@@ -1,4 +1,4 @@
-# Getting Started
+# 🔥 Getting Started
 ## Installation
 To create a new package using `create-packsmith`, simply run the following command in your terminal:
 ```bash

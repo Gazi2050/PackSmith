@@ -1,4 +1,4 @@
-# What is PackSmith?
+# ❓ What is PackSmith
 
 **PackSmith** is a minimal, opinionated toolkit for creating clean, reusable JavaScript/TypeScript packages — without framework lock-in or repetitive setup.
 

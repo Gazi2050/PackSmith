@@ -3,7 +3,7 @@ redirect: /guide/quick-start
 ---
 
 <script setup>
-if (typeof window !== 'undefined') {
+if (window.location.href = '/guide') {
   window.location.href = '/guide/quick-start'
 }
 </script>

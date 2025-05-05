@@ -11,7 +11,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide', activeMatch: '/guide/' }
+      { text: 'Guide', link: '/guide/quick-start', activeMatch: '/guide/' }
     ],
 
     sidebar: [
@@ -20,7 +20,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'What is PackSmith', link: '/guide/what-is-packsmith' },
-          { text: 'Getting Started', link: '/guide/quick-start' }
+          { text: 'Getting Started', link: '/guide/quick-start' },
+          { text: 'Configuration', link: '/guide/config' }
         ]
       },
       // Add more sections as needed
