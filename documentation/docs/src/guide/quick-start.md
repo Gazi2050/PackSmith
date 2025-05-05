@@ -7,20 +7,20 @@ npx create-packsmith <project-name>
 This will generate a fully structured project with all necessary tools pre-configured, so you can start coding right away.
 ### What to Expect in the CLI
 ```bash
-npx create-packsmith my-awesome-package
-🚀 Creating my-awesome-package...
+npx create-packsmith my-package
+🚀 Creating my-package...
 📦 Installing PackSmith...
 🛠 Installing dev dependencies...
 
-✅ Project "my-awesome-package" is ready!
+✅ Project "my-package" is ready!
 
-📂 cd my-awesome-package
+📂 cd my-package
 📦 npm install
 ```
 ## Folder Structure
 After installation, your project will be structured like this:
 ```bash
-my-awesome-package/
+my-package/
 ├── .gitignore            # Git ignore rules
 ├── .npmignore            # Controls which files are published
 ├── eslint.config.mjs     # ESLint configuration

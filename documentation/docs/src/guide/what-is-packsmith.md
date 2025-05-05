@@ -98,7 +98,7 @@ This approach is especially valuable for published packages, where **bundle size
 PackSmith uses a simple, intentional folder layout:
 
 ```bash
-my-awesome-package/
+my-package/
 ├── .gitignore            # Git ignore rules
 ├── .npmignore            # Controls which files are published
 ├── eslint.config.mjs     # ESLint configuration
