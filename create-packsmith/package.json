@@ -1,13 +1,13 @@
 {
   "name": "create-packsmith",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "bin": {
     "create-packsmith": "dist/index.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/Gazi2050/PackSmith",
+  "homepage": "https://packsmith.vercel.app",
   "repository": {
     "url": "https://github.com/Gazi2050/PackSmith"
   },
@@ -15,7 +15,6 @@
     "url": "https://github.com/Gazi2050/PackSmith/issues"
   },
   "scripts": {
-    "dev": "ts-node src/index.ts",
     "build": "tsup",
     "postbuild": "cpx \"src/templates/**/*.ejs\" dist/templates"
   },

@@ -1,5 +1,5 @@
 # 📦 `create-packsmith`  
-**A simple CLI tool to start a new project using [PackSmith](https://github.com/Gazi2050/PackSmith)**
+**A simple CLI tool to start a new project using [PackSmith](https://packsmith.vercel.app)**
 
 ## 🚀 Quick Start
 
