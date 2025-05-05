@@ -5,7 +5,9 @@ export default defineConfig({
   title: "PackSmith",
   description: "PackSmith documentation",
   srcDir: 'src',
+  head: [['link', { rel: 'icon', href: 'https://tinypic.host/images/2025/05/05/ps-logo.png' }]],
   themeConfig: {
+    logo: 'https://tinypic.host/images/2025/05/05/ps-logo.png',
     search: {
       provider: 'local'
     },

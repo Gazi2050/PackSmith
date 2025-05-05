@@ -8,7 +8,7 @@ hero:
   tagline: A minimal library for building packages.<br>Simplifies setup and speeds up development.
   image:
     src: https://tinypic.host/images/2025/05/04/ps.png
-    alt: VitePress
+    alt: Package
   actions:
     - theme: brand
       text: What is PackSmith

@@ -25,19 +25,24 @@ This file configures TypeScript to compile clean, modern JavaScript with strict 
 
 ```json
 {
-  "compilerOptions": {
-    "types": ["vitest"],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "declaration": true,
-    "outDir": "dist",
-    "allowJs": true
-  },
-  "include": ["src", "test"]
+    "compilerOptions": {
+        "types": [
+            "vitest"
+        ],
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "declaration": true,
+        "outDir": "dist",
+        "allowJs": true,
+    },
+    "include": [
+        "src",
+        "test"
+    ]
 }
 ```
 
@@ -61,17 +66,17 @@ import tseslint from "typescript-eslint";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
-  {
-    files: ["**/*.{js,mjs,cjs,ts}"],
-    ignores: ["dist/**"],
-    plugins: { js },
-    extends: ["js/recommended"],
-  },
-  {
-    files: ["**/*.{js,mjs,cjs,ts}"],
-    languageOptions: { globals: globals.browser },
-  },
-  tseslint.configs.recommended,
+    {
+        files: ["**/*.{js,mjs,cjs,ts}"],
+        ignores: ["dist/**"],
+        plugins: { js },
+        extends: ["js/recommended"],
+    },
+    {
+        files: ["**/*.{js,mjs,cjs,ts}"],
+        languageOptions: { globals: globals.browser },
+    },
+    tseslint.configs.recommended,
 ]);
 ```
 
@@ -92,21 +97,22 @@ Vitest is preconfigured for efficient TypeScript testing with a focus on Node.js
 import type { ViteUserConfig } from "vitest/config";
 
 export default async function (): Promise<ViteUserConfig> {
-  return {
-    plugins: [],
-    test: {
-      environment: "node",
-      include: ["test/**/*.test.ts"],
-      globals: true,
-      watch: false,
-      passWithNoTests: false,
-      coverage: {
-        provider: "v8",
-        reporter: ["json", "lcov", "text", "clover"],
-        reportsDirectory: "./coverage",
-      },
-    },
-  };
+
+    return {
+        plugins: [],
+        test: {
+            environment: "node",
+            include: ["test/**/*.test.ts"],
+            globals: true,
+            watch: false,
+            passWithNoTests: false,
+            coverage: {
+                provider: "v8",
+                reporter: ["json", "lcov", "text", "clover"],
+                reportsDirectory: "./coverage",
+            },
+        },
+    };
 }
 ```
 
@@ -127,14 +133,13 @@ Tsup handles bundling, minification, and TypeScript declaration generation for y
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/**/*.ts'],
-  format: ['esm', 'cjs'],
-  dts: true,
-  shims: true,
-  clean: true,
-  minify: true,
-  target: 'esnext',
-  outDir: 'dist',
+    entry: ['src/**/*.ts'],
+    format: ['esm', 'cjs'],
+    dts: true,
+    shims: true,
+    clean: true,
+    skipNodeModulesBundle: true,
+    target: 'node18'
 });
 ```
 
@@ -153,21 +158,28 @@ The `package.json` contains essential project metadata and predefined scripts fo
 
 ```json
 {
-  "name": "your-package-name",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "tsup",
-    "test": "vitest",
-    "lint": "eslint . --fix"
-  },
-  "dependencies": {
-    "vitest": "^0.0.0",
-    "tsup": "^0.0.0",
-    "eslint": "^0.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^0.0.0"
-  }
+    "name": "my-awesome-package",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup",
+        "lint": "eslint . --ext .ts --ignore-pattern dist/",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "packsmith": "^0.0.4"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.26.0",
+        "eslint": "^9.26.0",
+        "globals": "^16.0.0",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.4.0",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.31.1",
+        "vitest": "^3.1.2"
+    }
 }
 ```
 
