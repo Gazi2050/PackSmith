@@ -1,44 +1,57 @@
-# 📦 PackSmith (`under development`)
+# 📦 PackSmith *(under development)*
 
-### **A minimal library for building packages.**
+*Build once. Reuse everywhere.*
+
+### A one-command toolkit for production-ready JS/TS packages.
+PackSmith removes setup friction with a clean, framework-agnostic structure.
+Preconfigured with TypeScript, ESLint, Vitest, Tsup, and built-in utilities — so you can start building instantly.
+Perfect for open-source tools, internal SDKs, or cross-platform logic modules.
 
 ## 🚀 Quick Start
+
+Create a new package in seconds :
 
 ```bash
 npx create-packsmith <project-name>
 ```
+
+That’s it — your project is ready to build, test, and publish.
+
 ## 📚 Documentation
 
-Check out the full docs here → **[PackSmith Docs](https://packsmith.vercel.app)**
+### Explore the full documentation for more details → **[PackSmith Docs](https://packsmith.vercel.app)**
 
 ## 🙌 Contribute
 
-Want to improve `packsmith` ? You're awesome — here's how:
+Want to help improve **PackSmith**? You're awesome — here’s how to get started:
 
-1. **Fork & clone the repo**  
+1. **Fork & clone the repo**
+
    ```bash
    git clone https://github.com/Gazi2050/PackSmith.git
-
    cd PackSmith
    ```
 
-2. **Install dependencies**  
+2. **Install dependencies**
+
    ```bash
-   npm install  # installs all project dependencies
+   npm install
    ```
 
-3. **Create a new feature branch**  
+3. **Create a new feature branch**
+
    ```bash
-   git checkout -b feature-name  # name your branch after the feature
+   git checkout -b feature/my-feature
    ```
 
-4. **Make changes, then commit & push**  
+4. **Make changes, then commit & push**
+
    ```bash
-   git add .                                # stage your changes
-   git commit -m "feat: add your feature"   # commit with a clear message
-   git push origin feature-name             # push to your fork
+   git add .
+   git commit -m "feat: add my feature"
+   git push origin feature/my-feature
    ```
 
 5. **Open a pull request** on GitHub
 
-> Thanks for contributing to the project! Your support means a lot. 💚
+> 💚 Thanks for contributing! Every idea, fix, and feature makes this project better.

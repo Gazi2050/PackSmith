@@ -1,8 +1,9 @@
 # 📦 `create-packsmith`  
-**A simple CLI tool to start a new project using [PackSmith](https://packsmith.vercel.app)**
+
+**A simple CLI tool to quickly start a new project with [PackSmith](https://packsmith.vercel.app)**
 
 ## 🚀 Quick Start
-
+Create a new project in seconds :
 ```bash
 npx create-packsmith <project-name>
 ```
