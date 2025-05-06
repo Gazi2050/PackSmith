@@ -4,3 +4,4 @@ export { removeDuplicates } from "./removeDuplicates";
 export { mergeArrays } from "./mergeArrays";
 export { includesItem } from "./includesItem";
 export { areArraysEqual } from "./areArraysEqual";
+export { hasAnyItem } from "./hasAnyItem";
