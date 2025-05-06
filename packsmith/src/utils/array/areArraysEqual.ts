@@ -1,9 +1,19 @@
-export function areArraysEqual(value1: unknown[], value2: unknown[]) {
-    const isLengthSame = value1.length === value2.length
-    const isItemsSame = value1.every((val, i) => val === value2[i])
-    if (isLengthSame && isItemsSame) {
-        return true;
-    } else {
-        return false;
+export function areArraysEqual(...arrays: unknown[][]) {
+    const totalArrays = arrays.length;
+
+    if (totalArrays < 2) {
+        return {
+            array: arrays[0] ?? [],
+            message: 'Single array provided'
+        };
     }
+
+    const [referenceArray, ...otherArrays] = arrays;
+
+    const allEqual = otherArrays.every(currentArray =>
+        currentArray.length === referenceArray.length &&
+        currentArray.every((item, index) => item === referenceArray[index])
+    );
+
+    return allEqual;
 }
