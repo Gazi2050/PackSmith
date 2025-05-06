@@ -1,185 +1,174 @@
 # ⚙️ Configuration Overview
 
-PackSmith provides a **preconfigured, production-ready setup** so you can hit the ground running without spending time on boilerplate configurations. It includes all the tools you need for building modern JavaScript and TypeScript packages with minimal effort:
+**PackSmith** is a preconfigured toolkit for building modern JavaScript/TypeScript packages. It includes TypeScript, ESLint, Vitest, and Tsup—all wired together so you can start building immediately with zero setup.
 
-* ✅ [**TypeScript**](#📄-tsconfig-json-–-typescript-configuration) — Type-safe JavaScript development with excellent IDE support
-* ✅ [**ESLint**](#📄-eslint-config-mjs-–-eslint-configuration) — Automatic error detection and consistent code style enforcement
-* ✅ [**Vitest**](#🧪-vitest-config-ts-–-test-configuration) — Lightweight and powerful testing framework, ready to go
-* ✅ [**Tsup**](#📦-tsup-config-ts-–-build-configuration) — Fast, zero-config TypeScript bundler for building clean JavaScript
-* ✅ [**Predefined Scripts in `package.json`**](#📄-package-json-–-project-metadata-scripts) — Built-in commands for testing, building, and linting
+| File                                               | Purpose                                                |
+| -------------------------------------------------- | ------------------------------------------------------ |
+| [`tsconfig.json`](#📄-tsconfig-json-—-typescript)      | TypeScript config for strict typing and fast builds    |
+| [`eslint.config.mjs`](#📄-eslint-config-mjs-—-eslint)   | ESLint rules using flat config with TypeScript support |
+| [`vitest.config.ts`](#🧪-vitest-config-ts-—-testing)    | Vitest setup for fast Node-based tests with coverage   |
+| [`tsup.config.ts`](#📦-tsup-config-ts-—-build)          | Bundler configuration with ESM, CJS, and declarations  |
+| [`package.json`](#📄-package-json-—-scripts-metadata) | Project metadata and preconfigured scripts             |
 
-These tools are selected for **performance**, **simplicity**, and **modern standards**. All the configuration files are included and version-controlled, ensuring that your whole team works in the same environment, eliminating friction.
+This setup focuses on:
 
-PackSmith helps you build and publish packages with:
+* ✅ Speed and simplicity
+* ✅ Strong defaults and clean output
+* ✅ No clutter or overengineering
 
-* No extra setup
-* No unnecessary dependencies
-* No bloated scaffolding
-* Just the essentials to ship high-quality code
+## 📄 `tsconfig.json` — TypeScript
 
-## 📄 `tsconfig.json` – TypeScript Configuration
-
-This file configures TypeScript to compile clean, modern JavaScript with strict type-checking. It includes support for Vitest and ensures compatibility with Node.js or browser-like environments.
-
-### Default Code:
+TypeScript is preconfigured with strict settings, Node.js compatibility, and test support via Vitest. Build reliable and type-safe code easily.
 
 ```json
 {
   "compilerOptions": {
-    "types": [                // Include global types for the Vitest testing framework
-      "vitest"
-    ],
-    "target": "ESNext",       // Use the latest ECMAScript version for output
-    "module": "ESNext",       // Use native ECMAScript modules
-    "moduleResolution": "Node", // Resolve modules using Node.js logic
-    "strict": true,           // Enable all strict type-checking options
-    "esModuleInterop": true,  // Enable compatibility with CommonJS-style default imports
-    "skipLibCheck": true,     // Skip type checking of all declaration files (*.d.ts)
-    "declaration": true,      // Generate .d.ts declaration files
-    "outDir": "dist",         // Redirect output structure to the "dist" directory
-    "allowJs": true,           // Allow JavaScript files to be compiled
+    "types": ["vitest"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "dist",
+    "allowJs": true
   },
-  "include": [
-    "src",                    // Include the "src" folder (main source files)
-    "test"                    // Include the "test" folder (unit tests)
-  ]
+  "include": ["src", "test"]
 }
 ```
 
-### Customization:
+**🔧 Customization Tips:**
 
-* Modify `target` to `ES6` for compatibility with older environments.
-* Change `moduleResolution` to `classic` for non-Node.js environments.
+* For older environments, change `"target"` to `"ES6"`.
+* Remove `"allowJs"` if you don't want to compile `.js` files.
 
-## 📄 `eslint.config.mjs` – ESLint Configuration
+👉 [Read more on TypeScript config](https://www.typescriptlang.org/tsconfig)
 
-PackSmith uses a modern ESLint setup with flat config for automatic linting and consistent coding practices. It includes TypeScript support and can be extended for additional integrations like Prettier.
+## 📄 `eslint.config.mjs` — ESLint
 
-### Default Code:
+Modern ESLint with flat config and TypeScript support. Enforces consistent code style while catching potential issues early.
 
 ```js
-import js from "@eslint/js";                    // Import ESLint's base JavaScript rules plugin
-import globals from "globals";                  // Import a list of predefined global variables
-import tseslint from "typescript-eslint";       // Import TypeScript ESLint plugin/config
-import { defineConfig } from "eslint/config";   // Import defineConfig helper for ESLint configuration
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
 
 export default defineConfig([
-    {
-        files: ["**/*.{js,mjs,cjs,ts}"],        // Apply this config to JS/TS files
-        ignores: ["dist/**"],                   // Ignore compiled output directory
-        plugins: { js },                        // Use ESLint's JavaScript rules plugin
-        extends: ["js/recommended"],            // Extend recommended JavaScript linting rules
-    },
-    {
-        files: ["**/*.{js,mjs,cjs,ts}"],        // Again, target JS/TS files
-        languageOptions: { globals: globals.browser }, // Set global variables to browser environment
-    },
-    tseslint.configs.recommended,               // Add recommended rules for TypeScript
+  {
+    files: ["**/*.{js,mjs,cjs,ts}"],
+    ignores: ["dist/**"],
+    plugins: { js },
+    extends: ["js/recommended"],
+  },
+  {
+    files: ["**/*.{js,mjs,cjs,ts}"],
+    languageOptions: { globals: globals.browser },
+  },
+  tseslint.configs.recommended,
 ]);
 ```
 
-### Customization:
+**🔧 Customization Tips:**
 
-* Modify `globals` to `globals.node` for Node.js environments.
-* Replace `tseslint.configs.recommended` with `tseslint.configs.strict` for stricter linting.
+* Change `globals.browser` to `globals.node` for Node.js projects.
+* Swap `tseslint.configs.recommended` with `tseslint.configs.strict` for stricter rules.
 
-## 🧪 `vitest.config.ts` – Test Configuration
+👉 [ESLint Flat Config Guide](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 
-Vitest is preconfigured for efficient TypeScript testing with a focus on Node.js environments. It supports global test functions and coverage reporting, ensuring fast and simple testing.
+## 🧪 `vitest.config.ts` — Testing
 
-### Default Code:
+Vitest is set up for fast and simple testing in a Node environment. Includes global test functions and built-in coverage reporting.
 
 ```ts
-import type { ViteUserConfig } from "vitest/config"; // Import the type for Vite's user config used by Vitest
+import type { ViteUserConfig } from "vitest/config";
 
 export default async function (): Promise<ViteUserConfig> {
-
-    return {
-        plugins: [], // No Vite plugins are added for this config
-        test: {
-            environment: "node",               // Use Node.js environment for testing
-            include: ["test/**/*.test.ts"],    // Include test files matching this glob pattern
-            globals: true,                     // Enable global test functions (e.g., describe, it)
-            watch: false,                      // Disable watching files for changes
-            passWithNoTests: false,            // Fail if no tests are found
-            coverage: {
-                provider: "v8",                // Use V8 engine for coverage collection
-                reporter: ["json", "lcov", "text", "clover"], // Output coverage in multiple formats
-                reportsDirectory: "./coverage", // Output directory for coverage reports
-            },
-        },
-    };
+  return {
+    plugins: [],
+    test: {
+      environment: "node",
+      include: ["test/**/*.test.ts"],
+      globals: true,
+      watch: false,
+      passWithNoTests: false,
+      coverage: {
+        provider: "v8",
+        reporter: ["json", "lcov", "text", "clover"],
+        reportsDirectory: "./coverage"
+      }
+    }
+  };
 }
 ```
 
-### Customization:
+**🔧 Customization Tips:**
 
-* Set `test.environment: "jsdom"` for browser-like testing.
-* Modify `include` to include additional test file patterns, such as `.spec.ts`.
+* Change `environment` to `"jsdom"` for browser-like test environments.
+* Add `.spec.ts` to `include` if you use that naming convention.
 
-## 📦 `tsup.config.ts` – Build Configuration
+👉 [Vitest Configuration Docs](https://vitest.dev/config/)
 
-Tsup handles bundling, minification, and TypeScript declaration generation for your project. The default configuration ensures optimized builds with minimal effort and fast performance.
+## 📦 `tsup.config.ts` — Build
 
-### Default Code:
+Tsup builds your code into ESM and CJS formats, generates `.d.ts` files, and ensures compatibility with Node.js—all with minimal config.
 
 ```ts
-import { defineConfig } from 'tsup'; // Import the config helper from tsup
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
-    entry: ['src/**/*.ts'],             // Entry point(s): all TypeScript files in src/
-    format: ['esm', 'cjs'],             // Output both ES module and CommonJS formats
-    dts: true,                          // Generate TypeScript declaration files (.d.ts)
-    shims: true,                        // Include shims for Node.js globals like __dirname
-    clean: true,                        // Clean the output directory before building
-    skipNodeModulesBundle: true,        // Exclude node_modules from bundling
-    target: 'node18'                    // Set the build target environment to Node.js v18
+  entry: ['src/**/*.ts'],
+  format: ['esm', 'cjs'],
+  dts: true,
+  shims: true,
+  clean: true,
+  skipNodeModulesBundle: true,
+  target: 'node18'
 });
-
 ```
 
-### Customization:
+**🔧 Customization Tips:**
 
-* Modify `format` to generate only the necessary output formats, such as just `esm`.
-* Customize `minify` and `clean` based on the project needs (e.g., disable `minify` for debugging).
+* Use `format: ['esm']` if you don't need CommonJS output.
+* Set `minify: true` for smaller production builds.
 
-## 📄 `package.json` – Project Metadata & Scripts
+👉 [Tsup Configuration Guide](https://tsup.egoist.dev/#configuration)
 
-The `package.json` contains essential project metadata and predefined scripts for common tasks like building, testing, and linting. It simplifies development by integrating core tools and automating workflows.
+## 📄 `package.json` — Scripts & Metadata
 
-### Default Code:
+Project metadata with scripts for build, lint, and test. Includes only what you need—nothing more.
 
 ```json
 {
-    "name": "my-package",                    // Name of your package
-    "version": "0.0.1",                      // Initial version of your package
-    "main": "dist/index.js",                 // Main entry point for CommonJS consumers
-    "types": "dist/index.d.ts",              // Path to TypeScript declaration file
-
-    "scripts": {
-        "build": "tsup",                     // Build command using tsup
-        "lint": "eslint . --ext .ts --ignore-pattern dist/", // Lint all .ts files, ignore dist/
-        "test": "vitest"                     // Run tests using Vitest
-    },
-
-    "dependencies": {
-        "packsmith": "^0.0.4"                // Preconfigured toolkit for utilities
-    },
-
-    "devDependencies": {
-        "@eslint/js": "^9.26.0",             // ESLint's built-in JS config plugin
-        "eslint": "^9.26.0",                 // Core ESLint engine
-        "globals": "^16.0.0",                // List of global variables for different environments
-        "ts-node": "^10.9.2",                // Run TypeScript directly in Node
-        "tsup": "^8.4.0",                    // Zero-config TypeScript bundler
-        "typescript": "^5.8.3",              // TypeScript language and compiler
-        "typescript-eslint": "^8.31.1",      // ESLint plugin for TypeScript support
-        "vitest": "^3.1.3"                   // Unit testing framework
-    }
+  "name": "my-package",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --ext .ts --ignore-pattern dist/",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "packsmith": "^0.0.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "globals": "^16.0.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.1",
+    "vitest": "^3.1.3"
+  }
 }
 ```
 
-### Customization:
+**🔧 Customization Tips:**
 
-* Modify `name`,`version` and `scripts` for your specific project.
-* Add or remove dependencies in `dependencies` and `devDependencies` based on your project requirements.
+* Rename your package and set `author`, `license`, etc.
+* Add custom scripts for publish, clean, or format commands.
+
+👉 [npm package.json reference](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)
