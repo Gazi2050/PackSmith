@@ -2,7 +2,7 @@
 
 *Build once. Reuse everywhere.*
 
-### A one-command toolkit for production-ready JS/TS packages.
+### A minimal library for production-ready JS/TS packages.
 PackSmith removes setup friction with a clean, framework-agnostic structure.
 Preconfigured with TypeScript, ESLint, Vitest, Tsup, and built-in utilities — so you can start building instantly.
 Perfect for open-source tools, internal SDKs, or cross-platform logic modules.
