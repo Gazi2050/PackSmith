@@ -26,6 +26,9 @@
             "@array/*": [
                 "src/utils/array/*"
             ],
+            "@number*": [
+                "src/utils/number/*"
+            ],
             "@type/*": [
                 "src/type/*"
             ]
