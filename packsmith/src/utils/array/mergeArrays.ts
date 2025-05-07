@@ -1,3 +1,9 @@
+/**
+ * Merges multiple arrays into one and returns a status message.
+ * 
+ * @param arrays - One or more arrays to merge.
+ * @returns An object containing the merged array and a descriptive message.
+ */
 export function mergeArrays<T>(...arrays: T[][]) {
     if (arrays.length === 1) {
         return {
