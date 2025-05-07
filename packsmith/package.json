@@ -1,6 +1,9 @@
 {
     "name": "packsmith",
-    "version": "0.0.5",
+    "version": "0.0.6",
+    "author": "gazi2050",
+    "description": "A minimal library for building packages.",
+    "license": "MIT",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "homepage": "https://packsmith.vercel.app",
@@ -25,9 +28,6 @@
         "packsmith",
         "create-packsmith"
     ],
-    "author": "gazi2050",
-    "license": "MIT",
-    "description": "A minimal library for building packages.",
     "devDependencies": {
         "@eslint/js": "^9.25.1",
         "eslint": "^9.25.1",
