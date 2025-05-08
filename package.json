@@ -1,6 +1,6 @@
 {
     "name": "packsmith",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "author": "gazi2050",
     "description": "A minimal library for building packages.",
     "license": "MIT",
@@ -8,10 +8,10 @@
     "types": "dist/index.d.ts",
     "homepage": "https://packsmith.vercel.app",
     "repository": {
-        "url": "https://github.com/Gazi2050/PackSmith"
+        "url": "https://github.com/pack-smith/PackSmith"
     },
     "bugs": {
-        "url": "https://github.com/Gazi2050/PackSmith/issues"
+        "url": "https://github.com/pack-smith/PackSmith/issues"
     },
     "scripts": {
         "build": "tsup",
