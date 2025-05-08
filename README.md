@@ -1,6 +1,7 @@
-# 📦 PackSmith *(under development)*
+# 📦 PackSmith
+> ### *Build once. Reuse everywhere.*
 
->*Build once. Reuse everywhere.*
+### version: `0.0.6`
 
 ### A minimal library for production-ready JS/TS packages.
 PackSmith removes setup friction with a clean, framework-agnostic structure.
