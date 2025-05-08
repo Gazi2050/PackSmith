@@ -6,6 +6,6 @@ export function getSign(value: number) {
     } else if (value === 0) {
         return 'zero'
     } else {
-        return null
+        return NaN
     }
 }
