@@ -1,6 +1,6 @@
 {
     "name": "packsmith",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "author": "gazi2050",
     "description": "A minimal library for building packages.",
     "license": "MIT",
