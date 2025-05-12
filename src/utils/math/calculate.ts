@@ -2,7 +2,7 @@ import { OperationType } from "@type/type";
 
 export function calculate(
     operation: OperationType,
-    ...values: number[]
+    values: number[]
 ) {
     if (values.length < 2) {
         throw new Error('At least two numbers are required');
