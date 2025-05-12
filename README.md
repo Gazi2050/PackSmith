@@ -2,7 +2,7 @@
 
 > ### *Build once. Reuse everywhere.*
 
-### version: `0.0.8`
+### version: `0.0.9`
 
 ### A minimal library for production-ready JS/TS packages.
 PackSmith removes setup friction with a clean, framework-agnostic structure.
