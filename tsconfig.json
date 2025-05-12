@@ -29,6 +29,9 @@
             "@number/*": [
                 "src/utils/number/*"
             ],
+            "@math/*": [
+                "src/utils/math/*"
+            ],
             "@type/*": [
                 "src/type/*"
             ]
