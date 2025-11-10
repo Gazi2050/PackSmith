@@ -1,0 +1,48 @@
+{
+  "name": "create-packsmith",
+  "version": "1.0.3",
+  "author": "gazi2050",
+  "license": "MIT",
+  "description": "A simple CLI tool to quickly start a new project with PackSmith",
+  "type": "module",
+  "bin": {
+    "create-packsmith": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://packsmith.vercel.app",
+  "repository": {
+    "url": "https://github.com/pack-smith/create-packsmith"
+  },
+  "bugs": {
+    "url": "https://github.com/pack-smith/create-packsmith/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "postbuild": "cpx \"src/templates/**/*.ejs\" dist/templates"
+  },
+  "keywords": [
+    "cli",
+    "typescript",
+    "starter",
+    "generator",
+    "utility",
+    "packsmith",
+    "create-packsmith"
+  ],
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "ejs": "^3.1.10",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.14.1",
+    "cpx": "^1.5.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}

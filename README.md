@@ -1,10 +1,11 @@
 # 📦 PackSmith
 
-> ### *Build once. Reuse everywhere.*
+> ### _Build once. Reuse everywhere._
 
-### version: `0.0.9`
+### version: `1.0.0`
 
 ### A minimal library for production-ready JS/TS packages.
+
 PackSmith removes setup friction with a clean, framework-agnostic structure.
 Preconfigured with TypeScript, ESLint, Vitest, Tsup, and built-in utilities — so you can start building instantly.
 Perfect for open-source tools, internal SDKs, or cross-platform logic modules.
@@ -30,7 +31,7 @@ Want to help improve **PackSmith**? You're awesome — here’s how to get start
 1. **Fork & clone the repo**
 
    ```bash
-   git clone https://github.com/pack-smith/PackSmith.git
+   git clone https://github.com/Gazi2050/PackSmith.git
    cd PackSmith
    ```
 

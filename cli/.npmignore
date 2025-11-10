@@ -1,43 +1,35 @@
 # Node.js
 node_modules/
 
-# Source files and tests
+# source files and tests
 src/
-test/
+tests/
 
-# Configuration files
+# config files
 tsconfig.json
 tsup.config.ts
 *.tsbuildinfo
-eslint.config.mjs
-vitest.config.ts
 
 # Environment files
 .env
 .env.local
 .env.*.local
 
-# Version control
+# version control
 .git
 .gitignore
 
-# IDE/Editor files
+# IDE/Editor folders and files
 .vscode/
 .idea/
 *.swp
 *.swo
 .DS_Store
 
-# Coverage
+# Coverage directory
 coverage/
 
 # Project meta files
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 SECURITY.md
-
-# documentation
-documentation/
-
-# cli
-cli/
