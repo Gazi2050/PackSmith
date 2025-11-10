@@ -1,43 +1,43 @@
 {
-    "name": "packsmith",
-    "version": "0.0.9",
-    "author": "gazi2050",
-    "description": "A minimal library for building packages.",
-    "license": "MIT",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "homepage": "https://packsmith.vercel.app",
-    "repository": {
-        "url": "https://github.com/pack-smith/PackSmith"
-    },
-    "bugs": {
-        "url": "https://github.com/pack-smith/PackSmith/issues"
-    },
-    "scripts": {
-        "build": "tsup",
-        "lint": "eslint . --ext .ts --ignore-pattern dist/",
-        "test": "vitest"
-    },
-    "keywords": [
-        "utility",
-        "package",
-        "library",
-        "utility library",
-        "toolkit",
-        "starter-kit",
-        "packsmith",
-        "create-packsmith"
-    ],
-    "devDependencies": {
-        "@eslint/js": "^9.25.1",
-        "eslint": "^9.25.1",
-        "globals": "^16.0.0",
-        "ts-node": "^10.9.2",
-        "tsconfig-paths": "^4.2.0",
-        "tsup": "^8.4.0",
-        "typescript": "^5.8.3",
-        "typescript-eslint": "^8.31.0",
-        "vite-tsconfig-paths": "^5.1.4",
-        "vitest": "^3.1.2"
-    }
+  "name": "packsmith",
+  "version": "1.0.0",
+  "author": "gazi2050",
+  "description": "A minimal library for building packages.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://packsmith.vercel.app",
+  "repository": {
+    "url": "https://github.com/Gazi2050/PackSmith"
+  },
+  "bugs": {
+    "url": "https://github.com/Gazi2050/PackSmith/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --ext .ts --ignore-pattern dist/",
+    "test": "vitest"
+  },
+  "keywords": [
+    "utility",
+    "package",
+    "library",
+    "utility library",
+    "toolkit",
+    "starter-kit",
+    "packsmith",
+    "create-packsmith"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.2"
+  }
 }
